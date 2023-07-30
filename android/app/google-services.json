@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "128187392416",
+    "project_id": "learningdartiscool",
+    "storage_bucket": "learningdartiscool.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:128187392416:android:897d8a0454e2a6648d04c5",
+        "android_client_info": {
+          "package_name": "com.example.learningdart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "128187392416-199rs0qij52edm2e4dcimgqerpn9pvgo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkOM1sVHhEIhzbrkXSTM3jtPN0d_gwWBU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "128187392416-199rs0qij52edm2e4dcimgqerpn9pvgo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "128187392416-o0kk6g1fspkafpijvkh9lagnqdd0sucr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.learningdart"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
