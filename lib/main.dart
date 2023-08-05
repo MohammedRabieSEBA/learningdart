@@ -1,11 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:learningdart/view/login_view.dart';
 import 'package:learningdart/view/register_view.dart';
 import 'package:learningdart/view/verify_email.dart';
-
+import 'dart:developer' as devtools show log;
 import 'firebase_options.dart ';
 
 void main() {
@@ -41,20 +40,53 @@ class HomePage extends StatelessWidget {
             final currentUser = FirebaseAuth.instance.currentUser;
             if (currentUser != null) {
               if (currentUser.emailVerified) {
-                if (kDebugMode) {
-                  print('Email is verified');
-                }
+                return const NotesView();
               } else {
                 return const VerifyEmailView();
               }
             } else {
               return const LoginView();
             }
-            return const Text('Done');
           default:
             return const CircularProgressIndicator();
         }
       },
+    );
+  }
+}
+
+enum MenuAction { logout }
+
+class NotesView extends StatefulWidget {
+  const NotesView({super.key});
+
+  @override
+  State<NotesView> createState() => _NotesViewState();
+}
+
+class _NotesViewState extends State<NotesView> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Main UI'),
+        actions: [
+          PopupMenuButton<MenuAction>(
+            onSelected: (value) {
+              devtools.log(value.toString());
+            },
+            itemBuilder: (context) {
+              return [
+                const PopupMenuItem<MenuAction>(
+                  value: MenuAction.logout,
+                  child: Text('Logout'),
+                ),
+              ];
+            },
+          )
+        ],
+      ),
+      body: const Text('Hello World !'),
     );
   }
 }
