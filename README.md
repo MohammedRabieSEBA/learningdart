@@ -1,7 +1,7 @@
 
 # Learning Dart
 
-**Learning Dart** est un projet Flutter visant à enseigner les bases du langage Dart et à démontrer son utilisation avec Flutter pour la création d'applications multiplateformes. Ce projet inclut des démonstrations sur les fonctionnalités de base, telles que l'authentification Firebase, la gestion des erreurs et la navigation entre différentes vues.
+**Learning Dart** est un mini-projet développé dans le but d'apprendre les bases du langage Dart et de la programmation mobile avec Flutter. Ce projet permet de se familiariser avec les concepts fondamentaux de Flutter tout en créant une application multiplateforme. L'objectif est de comprendre la gestion des vues, l'authentification via Firebase, la navigation, ainsi que l'intégration de services backend.
 
 ## Fonctionnalités
 
